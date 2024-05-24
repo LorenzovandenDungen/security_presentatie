@@ -1,22 +1,33 @@
-import React from 'react';
-import 'tailwindcss/tailwind.css';
+'use client'; // Mark this component as a client component
+
+import React, { useEffect } from 'react';
+import '../globals.css'; // Correct import path for the CSS file
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'; // Import from next/navigation instead of next/router
 
 const HomePage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname === "/admin") {
+      router.push("/admin/login");
+    }
+  }, [router]);
+
   return (
     <div className="bg-gradient-to-b from-purple-900 to-black text-white min-h-screen flex flex-col items-center justify-start">
       <header className="bg-gradient-to-r from-purple-800 to-purple-600 w-full p-6 fixed top-0 shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-3xl font-bold">Security Awareness Systeem</h1>
           <nav className="space-x-6">
-            <Link href="/admin/login" legacyBehavior>
-              <a className="hover:text-gray-300 transition-colors duration-300">Admin Login</a>
+            <Link href="/admin/login" className="hover:text-gray-300 transition-colors duration-300">
+              Admin Login
             </Link>
-            <Link href="/employee/login" legacyBehavior>
-              <a className="hover:text-gray-300 transition-colors duration-300">Employee Login</a>
+            <Link href="/employee/login" className="hover:text-gray-300 transition-colors duration-300">
+              Employee Login
             </Link>
-            <Link href="/manager/login" legacyBehavior>
-              <a className="hover:text-gray-300 transition-colors duration-300">Manager Login</a>
+            <Link href="/manager/login" className="hover:text-gray-300 transition-colors duration-300">
+              Manager Login
             </Link>
           </nav>
         </div>
