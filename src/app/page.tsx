@@ -1,5 +1,6 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const HomePage: React.FC = () => {
   return (
