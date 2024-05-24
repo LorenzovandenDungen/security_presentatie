@@ -1,7 +1,7 @@
 'use client'; // Mark this component as a client component
 
 import React, { useEffect } from 'react';
-import '../globals.css'; // Correct import path for the CSS file
+import './globals.css'; // Correct import path for the CSS file
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'; // Import from next/navigation instead of next/router
 
