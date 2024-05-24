@@ -33,14 +33,14 @@ const HomePage = () => {
             <p className="text-lg">Voer uw invite code in om toegang te krijgen tot het systeem</p>
           </div>
           <div className="bg-purple-700 p-10 rounded-lg text-center shadow-xl transform transition duration-500 hover:scale-105 hover:bg-purple-800">
-            <i className="fas fa-user-shield text-5xl mb-6"></i>
-            <h3 className="text-2xl font-semibold mb-4">Admin Login</h3>
-            <p className="text-lg">Beheer gebruikers, uitnodigingen en trainingen</p>
+            <i className="fas fa-user text-5xl mb-6"></i>
+            <h3 className="text-2xl font-semibold mb-4">E-mail</h3>
+            <p className="text-lg">Gebruik uw e-mailadres om in te loggen</p>
           </div>
           <div className="bg-purple-700 p-10 rounded-lg text-center shadow-xl transform transition duration-500 hover:scale-105 hover:bg-purple-800">
-            <i className="fas fa-user-tie text-5xl mb-6"></i>
-            <h3 className="text-2xl font-semibold mb-4">Manager Login</h3>
-            <p className="text-lg">Bekijk en beheer trainingsresultaten van uw medewerkers</p>
+            <i className="fas fa-chart-line text-5xl mb-6"></i>
+            <h3 className="text-2xl font-semibold mb-4">Statistieken</h3>
+            <p className="text-lg">Bekijk de voortgang en resultaten van uw medewerkers</p>
           </div>
         </div>
       </main>
