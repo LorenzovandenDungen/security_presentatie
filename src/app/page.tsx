@@ -9,9 +9,15 @@ const HomePage = () => {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-3xl font-bold">Security Awareness Systeem</h1>
           <nav className="space-x-6">
-            <Link href="/admin/login" className="hover:text-gray-300 transition-colors duration-300">Admin Login</Link>
-            <Link href="/employee/login" className="hover:text-gray-300 transition-colors duration-300">Employee Login</Link>
-            <Link href="/manager/login" className="hover:text-gray-300 transition-colors duration-300">Manager Login</Link>
+            <Link href="/admin/login" legacyBehavior>
+              <a className="hover:text-gray-300 transition-colors duration-300">Admin Login</a>
+            </Link>
+            <Link href="/employee/login" legacyBehavior>
+              <a className="hover:text-gray-300 transition-colors duration-300">Employee Login</a>
+            </Link>
+            <Link href="/manager/login" legacyBehavior>
+              <a className="hover:text-gray-300 transition-colors duration-300">Manager Login</a>
+            </Link>
           </nav>
         </div>
       </header>
