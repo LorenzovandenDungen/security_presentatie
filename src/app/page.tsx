@@ -1,55 +1,43 @@
-// src/app/page.tsx
-
 import React from 'react';
 import 'tailwindcss/tailwind.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="bg-teal-100">
-      <div className="bg-gradient-to-r from-purple-900 to-purple-800 text-white p-8">
-        <div className="flex justify-between items-center">
-          <div className="text-3xl font-bold">HOME</div>
-          <nav className="space-x-8 text-xl">
-            <a href="#" className="hover:text-teal-400">ABOUT US</a>
-            <a href="#" className="hover:text-teal-400">SERVICES</a>
-            <a href="#" className="hover:text-teal-400">CONTACT</a>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <input type="text" placeholder="Search" className="p-2 rounded-full text-black" />
-            <div className="flex items-center space-x-2">
-              <i className="fas fa-mouse text-teal-400"></i>
-              <span>PROFESSIONAL SECURITY</span>
+    <div className="bg-gray-50 min-h-screen flex flex-col items-center justify-center">
+      <div className="bg-white p-8 shadow-lg rounded-lg max-w-4xl text-center">
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
+          Welkom bij het <span className="text-purple-700">Security Awareness Systeem</span>
+        </h1>
+        <p className="text-lg text-gray-700 mb-10">
+          Inloggen met een invite code of e-mail om toegang te krijgen tot de trainingen.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <a href="/admin/login" className="bg-purple-700 text-white p-6 rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105">
+            <div className="flex flex-col items-center">
+              <i className="fas fa-user-shield text-3xl mb-4"></i>
+              <h3 className="text-2xl font-semibold mb-2">Admin Login</h3>
+              <p>Beheer gebruikers, uitnodigingen en trainingen.</p>
             </div>
-          </div>
-        </div>
-
-        <div className="flex mt-16">
-          <div className="w-1/2 space-y-4">
-            <h1 className="text-7xl font-bold text-teal-400">CYBER SECURITY</h1>
-            <h2 className="text-2xl">PROTECTING YOUR SYSTEM</h2>
-            <p className="text-lg max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.</p>
-            <div className="space-x-4">
-              <button className="bg-purple-700 py-2 px-4 rounded-full hover:bg-teal-400 transition duration-300">JOIN US</button>
-              <button className="bg-purple-700 py-2 px-4 rounded-full hover:bg-teal-400 transition duration-300">LEARN MORE</button>
+          </a>
+          <a href="/employee/login" className="bg-purple-700 text-white p-6 rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105">
+            <div className="flex flex-col items-center">
+              <i className="fas fa-user text-3xl mb-4"></i>
+              <h3 className="text-2xl font-semibold mb-2">Employee Login</h3>
+              <p>Voer uw invite code in om de beschikbare trainingen te zien.</p>
             </div>
-            <div className="mt-8">
-              <div className="border border-teal-400 rounded-lg p-4 inline-block">
-                <i className="fas fa-shield-alt text-4xl text-teal-400"></i>
-              </div>
+          </a>
+          <a href="/manager/login" className="bg-purple-700 text-white p-6 rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105">
+            <div className="flex flex-col items-center">
+              <i className="fas fa-user-tie text-3xl mb-4"></i>
+              <h3 className="text-2xl font-semibold mb-2">Manager Login</h3>
+              <p>Bekijk en beheer trainingsresultaten van uw medewerkers.</p>
             </div>
-            <address className="not-italic mt-4">99 SW 8th St, Miami, FL 33130</address>
-          </div>
-          <div className="w-1/2 relative">
-            <img
-              src="https://placehold.co/400x300"
-              alt="A person wearing a hoodie holding a mask, with laptops in the background"
-              className="rounded-xl border-8 border-teal-400"
-            />
-            <div className="absolute inset-0 rounded-xl border-8 border-teal-400 opacity-50"></div>
-          </div>
+          </a>
         </div>
       </div>
+      <footer className="mt-8 text-gray-600">
+        <p>Security Awareness Systeem © 2024</p>
+      </footer>
     </div>
   );
 };
