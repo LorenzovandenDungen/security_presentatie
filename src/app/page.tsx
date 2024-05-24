@@ -1,41 +1,53 @@
-import React from 'react';
+// src/app/page.tsx
 
-const HomePage = () => {
+import React from 'react';
+import 'tailwindcss/tailwind.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-900 via-gray-900 to-black text-white">
-      <header className="flex justify-between items-center p-6 bg-gray-800 bg-opacity-50">
-        <div className="text-teal-500 text-2xl font-bold">PROFESSIONAL SECURITY</div>
-        <nav className="space-x-6">
-          <a href="#" className="hover:text-teal-500">HOME</a>
-          <a href="#" className="hover:text-teal-500">ABOUT US</a>
-          <a href="#" className="hover:text-teal-500">SERVICES</a>
-          <a href="#" className="hover:text-teal-500">CONTACT</a>
-        </nav>
-        <div className="relative">
-          <input type="text" placeholder="SEARCH" className="bg-gray-700 p-2 rounded-full pl-8" />
-          <span className="absolute left-2 top-2 text-gray-500">🔍</span>
-        </div>
-      </header>
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto p-8">
-        <div className="text-center md:text-left md:w-1/2 p-6">
-          <h1 className="text-5xl font-bold text-teal-400">CYBER SECURITY</h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Protecting Your System
-          </p>
-          <p className="mt-4 text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.
-          </p>
-          <div className="mt-6 space-x-4">
-            <button className="bg-purple-600 text-white px-6 py-2 rounded-full">JOIN US</button>
-            <button className="bg-teal-500 text-white px-6 py-2 rounded-full">LEARN MORE</button>
+    <div className="bg-teal-100">
+      <div className="bg-gradient-to-r from-purple-900 to-purple-800 text-white p-8">
+        <div className="flex justify-between items-center">
+          <div className="text-3xl font-bold">HOME</div>
+          <nav className="space-x-8 text-xl">
+            <a href="#" className="hover:text-teal-400">ABOUT US</a>
+            <a href="#" className="hover:text-teal-400">SERVICES</a>
+            <a href="#" className="hover:text-teal-400">CONTACT</a>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <input type="text" placeholder="Search" className="p-2 rounded-full text-black" />
+            <div className="flex items-center space-x-2">
+              <i className="fas fa-mouse text-teal-400"></i>
+              <span>PROFESSIONAL SECURITY</span>
+            </div>
           </div>
-          <p className="mt-4 text-gray-500">
-            99 SW 8th St, Miami, FL 33130
-          </p>
         </div>
-        <div className="relative md:w-1/2 mt-8 md:mt-0">
-          <img src="/path-to-your-image.jpg" alt="Cyber Security" className="rounded-lg shadow-lg"/>
-          <div className="absolute inset-0 rounded-lg border-4 border-teal-500"></div>
+
+        <div className="flex mt-16">
+          <div className="w-1/2 space-y-4">
+            <h1 className="text-7xl font-bold text-teal-400">CYBER SECURITY</h1>
+            <h2 className="text-2xl">PROTECTING YOUR SYSTEM</h2>
+            <p className="text-lg max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.</p>
+            <div className="space-x-4">
+              <button className="bg-purple-700 py-2 px-4 rounded-full hover:bg-teal-400 transition duration-300">JOIN US</button>
+              <button className="bg-purple-700 py-2 px-4 rounded-full hover:bg-teal-400 transition duration-300">LEARN MORE</button>
+            </div>
+            <div className="mt-8">
+              <div className="border border-teal-400 rounded-lg p-4 inline-block">
+                <i className="fas fa-shield-alt text-4xl text-teal-400"></i>
+              </div>
+            </div>
+            <address className="not-italic mt-4">99 SW 8th St, Miami, FL 33130</address>
+          </div>
+          <div className="w-1/2 relative">
+            <img
+              src="https://placehold.co/400x300"
+              alt="A person wearing a hoodie holding a mask, with laptops in the background"
+              className="rounded-xl border-8 border-teal-400"
+            />
+            <div className="absolute inset-0 rounded-xl border-8 border-teal-400 opacity-50"></div>
+          </div>
         </div>
       </div>
     </div>
